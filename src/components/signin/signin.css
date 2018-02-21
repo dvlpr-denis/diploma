@@ -1,0 +1,34 @@
+.signin-form {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.signin-form input {
+    width: 80%;
+    border: 0;
+    padding: 15px 0 15px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.signin-form input[type="email"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.signin-form input[type="password"] {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.signin-form input[type="submit"] {
+    background-color: #f9671e;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 83%;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,25 @@
+.signup-form {
+    margin-top: 150px;
+    text-align: center;
+    padding: 0 60px;
+}
+
+.signup-form > * {
+    margin-bottom: 15px;
+}
+
+.signup-form input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.signup-form input[type="submit"] {
+    background-color: #000;
+    color:#fff;
+    padding-top: 10px;
+    cursor: pointer;
+}

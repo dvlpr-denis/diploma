@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    background: url('image/appbg.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.App-image {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-top: 60px;
+}
+
+.App-image img {
+    width: 30%;
+}
+
+
+.signin-facebook,
+.signin-tw {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.signin-image {
+    padding-right: 10px;
+    width: 3%;
+}
+
+.signin-facebook {
+    margin-top: 20px;
+    background-color: #3b5998;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.signin-tw {
+    margin-top: 10px;
+    background-color: #1ab2e8;
+    cursor: pointer;
+}
+
+.signin-tw img {
+    width: 6%;
+}
