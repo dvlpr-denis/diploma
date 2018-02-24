@@ -5,7 +5,7 @@ class SigninForm extends Component {
 
     render() {
         return (
-            <form className="signin-form">
+            <form onSubmit={this.props.onSubmit} className="signin-form">
                 <div className="signin-form_email">
                     <input type="email" name="email" placeholder="E-mail"/>
                 </div>

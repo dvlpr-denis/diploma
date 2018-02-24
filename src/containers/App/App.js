@@ -3,16 +3,13 @@ import './App.css';
 import img from './image/camera.png';
 import fb from './image/fb_icon.png';
 import tw from './image/tw_icon.png';
-import createHistory from 'history/createBrowserHistory';
 import SigninForm from "../../components/signin/sigin";
-
-const history = createHistory();
 
 class App extends Component {
 
     submitData = event => {
         event.preventDefault();
-        history.push('/choicepage');
+        this.props.history.push('/choicepage');
     };
 
     render() {
