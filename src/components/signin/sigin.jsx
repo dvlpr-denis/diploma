@@ -3,16 +3,9 @@ import './signin.css';
 
 class SigninForm extends Component {
 
-    submitData = event => {
-        event.preventDefault();
-        console.log(this);
-        this.props.history.push('/choicepage');
-    };
-
-
     render() {
         return (
-            <form className="signin-form"  onSubmit={this.submitData} >
+            <form className="signin-form">
                 <div className="signin-form_email">
                     <input type="email" name="email" placeholder="E-mail"/>
                 </div>
