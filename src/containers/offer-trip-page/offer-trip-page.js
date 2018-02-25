@@ -28,7 +28,7 @@ class OfferTripPage extends Component {
                 </div>
 
                 <div className="offertrip_input">
-                    <input type="submit" name="hours" value="Добавить поездку" />
+                    <input type="submit" name="submit" value="Добавить поездку" />
                 </div>
             </form>
         );
