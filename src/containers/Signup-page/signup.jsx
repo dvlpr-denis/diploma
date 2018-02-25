@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import './App.css';
-import {Link} from 'react-router-dom';
+import '../App/App.css';
 import img from './image/camera.png';
 import fb from './image/fb_icon.png';
 import tw from './image/tw_icon.png';
-import SigninForm from "../../components/signin/sigin";
+import SignupForm from "../../components/signup/Singup_form";
 
-class App extends Component {
+class SignUp extends Component {
 
     submitData = event => {
         event.preventDefault();
@@ -21,24 +20,20 @@ class App extends Component {
                     <img src={img} alt=""/>
                 </div>
 
-                <SigninForm  onSubmit={this.submitData} />
+                <SignupForm  onSubmit={this.submitData} />
 
                 <div className="signin-facebook">
                     <img src={fb} alt="" className="signin-image"/>
-                    Войти с помощью Facebook
+                    Зарегистрироваться с помощью Facebook
                 </div>
 
                 <div className="signin-tw">
                     <img src={tw} alt="" className="signin-image"/>
-                    Войти с помощью Twitter
+                    Зарегистрироваться с помощью Twitter
                 </div>
-
-                <Link to="/signup">
-                    Нету аккаунта? Зарегистрироваться
-                </Link>
             </div>
         );
     }
 }
 
-export default App;
+export default SignUp;

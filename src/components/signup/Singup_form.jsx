@@ -32,6 +32,10 @@ class SignupForm extends Component {
                     <input type="password" name="password" placeholder="Пароль"/>
                 </div>
 
+                <div className="signup-form_repassword">
+                    <input type="password" name="password" placeholder="Пароль"/>
+                </div>
+
                 <div className="signup-form_submit">
                     <input type="submit" name="submit" value="ОТПРАВИТЬ"/>
                 </div>

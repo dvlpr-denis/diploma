@@ -1,0 +1,4 @@
+.trip-from_row,
+.trip-where_row {
+    display: flex;
+}
