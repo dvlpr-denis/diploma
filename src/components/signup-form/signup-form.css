@@ -17,6 +17,10 @@
     width: 100%;
 }
 
+.signup-form input::placeholder {
+    color: white;
+}
+
 .signup-form input[type="submit"] {
     background-color: #000;
     color:#fff;

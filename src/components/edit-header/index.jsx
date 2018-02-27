@@ -1,14 +1,15 @@
 import React from 'react';
-import './editheader.css';
+import './edit-header.css';
+import {Link} from 'react-router-dom';
 
-function editheader () {
+function EditHeader () {
     return (
         <header className="editheader">
-            <a href="#">
+            <Link to="/">
                 <img src="src/components/editheader/image/user.png" alt=""/>
-            </a>
+            </Link>
         </header>
     );
 }
 
-export default editheader;
+export default EditHeader;

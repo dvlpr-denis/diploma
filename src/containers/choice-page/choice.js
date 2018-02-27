@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './choice.css';
 import {Link} from 'react-router-dom';
-import Editheader from 'components/editheader/Editheader';
+import EditHeader from '../../components/edit-header';
 
 class ChoicePage extends Component {
     render() {
         return (
             <div className="ChoisePage">
-                <Editheader />
+                <EditHeader />
 
                 <h1 className="choise_title">
                     Едете куда-то?<br/>

@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
-import '../App/App.css';
+import SignupForm from "../../components/signup-form/index";
+import {withRouter} from "react-router-dom";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {userSignin} from '../../store/actions/user.actions';
 import img from './image/camera.png';
 import fb from './image/fb_icon.png';
 import tw from './image/tw_icon.png';
-import SignupForm from "../../components/signup/Singup_form";
 
 class SignUp extends Component {
+    constructor(props) {
+        super();
+    }
 
     submitData = event => {
         event.preventDefault();
@@ -36,4 +42,10 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+function mapDispatchToProps(dispatch) {
+    return {
+        userSignin: bindActionCreators(userSignin, dispatch),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(withRouter(SignUp));
