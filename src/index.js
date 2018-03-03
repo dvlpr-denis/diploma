@@ -21,6 +21,7 @@ import ListTrip from "./containers/list-trip-page/list-trip-page";
 import DetailsTrip from "./containers/details-trip-page/details-trip-page";
 import SignUp from "./containers/signup-page/signup";
 import SignIn from "./containers/signin-page/signin";
+import Logout from "./containers/logout/logout";
 
 const history = createHistory();
 const store = configureStore(history);
@@ -39,6 +40,7 @@ ReactDOM.render([
                 <PrivateRoute path='/details' component={DetailsTrip}/>
                 <Route path='/signup' component={SignUp}/>
                 <Route path='/signin' component={SignIn}/>
+                <Route path='/logout' component={Logout}/>
             </Switch>
         </Router>
     </Provider>,

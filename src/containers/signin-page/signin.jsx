@@ -13,7 +13,7 @@ import {NotificationManager} from 'react-notifications';
 class Signin extends Component {
     login = async (login, password) => {
         const isLogin = await this.props.userSignin({username: login, password});
-
+        
         if (isLogin) {
             this.props.history.push('/choicepage');
         } else {

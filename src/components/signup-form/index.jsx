@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
 import './signup-form.css';
+import {NotificationManager} from 'react-notifications';
 
 class SignupForm extends Component {
+    onSubmit = (event) => {
+        event.preventDefault();
+
+        const password = event.target.password.value;
+        const repeatPassword = event.target.repeatPassword.value;
+
+        if (password === repeatPassword) {
+            const login = event.target.login.value;
+            const email = event.target.email.value;
+
+            this.props.signup({username: login, password, email});
+        } else {
+            NotificationManager.error('Пароли не совпадают')
+        }
+    };
+
     render() {
         return (
-            <form className="signup-form" onSubmit = {this.props.onSubmit}>
+            <form className="signup-form" onSubmit = {this.onSubmit}>
                 <div className="signup-form_login">
                     <input type="text" name="login" placeholder="Логин"/>
                 </div>
@@ -18,7 +35,7 @@ class SignupForm extends Component {
                 </div>
 
                 <div className="signup-form_repassword">
-                    <input type="password" name="repeat-password" placeholder="Пароль"/>
+                    <input type="password" name="repeatPassword" placeholder="Пароль"/>
                 </div>
 
                 <div className="signup-form_submit">

@@ -5,7 +5,8 @@ const defaultState = {
     email: undefined,
     token: undefined,
     isAuth: false,
-    isAuthFail: false
+    isAuthFail: false,
+    errorMessage: ''
 };
 
 const initialState = localStorage.getItem('user-state') === null ?
@@ -17,6 +18,21 @@ export default function (state = initialState, {type, payload}) {
     switch (type) {
         case userActions.AUTH_USER_START:
             newState = {...state, isAuth: true};
+            break;
+        case userActions.REGISTRATION_SUCCESS:
+            newState = {
+                ...state,
+                isAuth: false,
+                isAuthFail: false,
+            };
+            break;
+        case userActions.REGISTRATION_FAIL:
+            newState = {
+                ...state,
+                isAuth: false,
+                isAuthFail: true
+
+            };
             break;
         case userActions.LOGIN_USER_SUCCESS:
             newState = {
@@ -30,6 +46,9 @@ export default function (state = initialState, {type, payload}) {
             break;
         case userActions.LOGIN_USER_FAIL:
             newState = {...state, isAuth: false, isAuthFail: true};
+            break;
+        case userActions.LOGOUT:
+            newState = {...defaultState};
             break;
         default:
             newState = state;

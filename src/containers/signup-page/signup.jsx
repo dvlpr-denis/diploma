@@ -3,19 +3,21 @@ import SignupForm from "../../components/signup-form/index";
 import {withRouter} from "react-router-dom";
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {userSignin} from '../../store/actions/user.actions';
+import {userSignup} from '../../store/actions/user.actions';
 import img from './image/camera.png';
 import fb from './image/fb_icon.png';
 import tw from './image/tw_icon.png';
+import {NotificationManager} from "react-notifications";
 
 class SignUp extends Component {
-    constructor(props) {
-        super();
-    }
+    submitData = async (userData) => {
+        const data = await this.props.userSignup(userData);
 
-    submitData = event => {
-        event.preventDefault();
-        this.props.history.push('/choicepage');
+        if (data) {
+            this.props.history.push('/choicepage');
+        } else {
+            NotificationManager.error('Упс, что-то пошло не так :(');
+        }
     };
 
     render() {
@@ -26,7 +28,7 @@ class SignUp extends Component {
                     <img src={img} alt=""/>
                 </div>
 
-                <SignupForm  onSubmit={this.submitData} />
+                <SignupForm signup={this.submitData} />
 
                 <div className="signin-facebook">
                     <img src={fb} alt="" className="signin-image"/>
@@ -44,7 +46,7 @@ class SignUp extends Component {
 
 function mapDispatchToProps(dispatch) {
     return {
-        userSignin: bindActionCreators(userSignin, dispatch),
+        userSignup: bindActionCreators(userSignup, dispatch),
     }
 }
 

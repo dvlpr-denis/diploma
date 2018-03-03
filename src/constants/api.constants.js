@@ -6,7 +6,8 @@ const devBaseUrl = devProtocol + devHost + devPort + devPrefix;
 
 const apiConstants = {
     baseUrl: devBaseUrl,
-    signinUrl: '/signin'
+    signinUrl: '/signin',
+    signupUrl: '/signup'
 };
 
 export {apiConstants};
